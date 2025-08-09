@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fully Furnished Rooms — Metro Linked (Dubai)</title>
+
+   
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    /* reveal animation */
+    .reveal-item { opacity: 0; transform: translateY(18px); transition: all .6s cubic-bezier(.2,.9,.2,1); }
+    .reveal-item.revealed { opacity: 1; transform: translateY(0); }
+
+    /* facility card inner glow */
+    .facility-card { transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease; }
+    .facility-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 20px 40px rgba(2,6,23,0.12); border-color: rgba(0,119,182,0.18); }
+
+    /* top contact bar look */
+    .contact-pill { border-radius: 999px; padding: .6rem 1.25rem; display:inline-flex; align-items:center; gap:.6rem; background:white; box-shadow: 0 6px 20px rgba(2,6,23,0.08); }
+
+    /* hero overlay using poster image — replace poster-bg.jpg with your poster file */
+    .hero {
+  background-image: url('https://asset.mansionglobal.com/editorial/dubai-the-hottest-luxury-market-in-the-world-is-getting-a-fresh-influx-of-sparkling-new-builds/assets/NIaw0AnN6P/vela-viento-4-1932x1087.webp');
+  background-size: cover;
+  background-position: center;
+}
+@keyframes backgroundZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.hero {
+  /* Add this */
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45); /* semi-transparent black overlay */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit; /* inherit the same background */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  animation: backgroundZoom 20s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero .text-white {
+  animation: fadeSlideUp 1.2s ease forwards;
+  position: relative;
+  z-index: 1;
+}
+@keyframes zoomBackground {
+  0%, 100% {
+    background-size: 100% 100%;
+  }
+  50% {
+    background-size: 110% 110%;
+  }
+}
+
+@keyframes zoomBackground {
+  0%, 100% {
+    background-size: 100% 100%;
+  }
+  50% {
+    background-size: 110% 110%;
+  }
+}
+
+.hero {
+  animation: zoomBackground 8s ease-in-out infinite;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#about {
+  min-height: 600px;
+}
+
+#about > div > div:first-child {
+  height: 100%;
+}
+
+/* Background with transparency */
+/* Background with transparency */
+#about {
+  position: relative;
+  background-image: url('https://asset.mansionglobal.com/editorial/dubai-the-hottest-luxury-market-in-the-world-is-getting-a-fresh-influx-of-sparkling-new-builds/assets/OuXZqz2fLK/harrison-la-mer-1-1949x1348.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Background with parallax effect */
+/* Background with parallax effect */
+/* Background with parallax effect */
+#about {
+  position: relative;
+  background-image: url('https://asset.mansionglobal.com/editorial/dubai-the-hottest-luxury-market-in-the-world-is-getting-a-fresh-influx-of-sparkling-new-builds/assets/OuXZqz2fLK/harrison-la-mer-1-1949x1348.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Transparent overlay */
+#about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Staggered delays */
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+.delay-4 { animation-delay: 1.2s; }
+.delay-5 { animation-delay: 1.5s; }
+
+
+/* Base animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Staggered delays */
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+.delay-4 { animation-delay: 1.2s; }
+.delay-5 { animation-delay: 1.5s; }
+
+
+.animate-slideIn {
+  animation: slideIn 1s ease-out forwards;
+}
+
+
+/* Animation keyframes */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 1s ease-out forwards;
+}
+
+
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#about > div > div:last-child {
+  animation: fadeSlideUp 1.5s ease forwards;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide-up {
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+
+
+.animate-fade-slide-up {
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+.delay-6 { animation-delay: 1.2s; }
+.delay-7 { animation-delay: 1.4s; }
+.delay-8 { animation-delay: 1.6s; }
+.delay-9 { animation-delay: 1.8s; }
+
+/* Facilities section background */
+#facilities {
+  min-height: 600px;
+  position: relative;
+  background-image: url('https://asset.mansionglobal.com/editorial/dubai-the-hottest-luxury-market-in-the-world-is-getting-a-fresh-influx-of-sparkling-new-builds/assets/QWW2awFMgF/vela-viento-2-1951x1302.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#facilities::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Locations section background */
+#locations {
+  min-height: 600px;
+  position: relative;
+  background-image: url('https://asset.mansionglobal.com/editorial/dubai-the-hottest-luxury-market-in-the-world-is-getting-a-fresh-influx-of-sparkling-new-builds/assets/HdD9LWYpuL/alef-dma-2-1947x1298.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#locations::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Contact section background */
+#contact {
+  min-height: 600px;
+  position: relative;
+  background-image: url('https://asset.mansionglobal.com/editorial/dubai-the-hottest-luxury-market-in-the-world-is-getting-a-fresh-influx-of-sparkling-new-builds/assets/fMfVnHDL42/one-za-abeel-3-1947x1298.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+
+
+
+
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a class="text-xl font-bold text-[#004d66]" href="#home">Dubai Rooms</a>
+      <nav class="hidden md:flex gap-6 text-sm font-medium text-gray-700">
+        <a href="#home" class="hover:text-[#0077b6]">Home</a>
+        <a href="#about" class="hover:text-[#0077b6]">About</a>
+        <a href="#locations" class="hover:text-[#0077b6]">Locations</a>
+        <a href="#facilities" class="hover:text-[#0077b6]">Facilities</a>
+        <a href="#contact" class="hover:text-[#0077b6]">Contact</a>
+      </nav>
+      <div class="md:hidden text-gray-600">☰</div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero h-[70vh] md:h-[100vh] flex items-center">
+    <div class="max-w-7xl mx-auto w-full px-6" style="position:relative;z-index:1;">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="text-white" style="position:relative;z-index:1;">
+          <div class="inline-block bg-white/10 rounded-full px-4 py-1 text-sm font-semibold mb-4">NO COMMISSION — DIRECT FROM OWNER</div>
+
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mt-4">ARE YOU<br/>LOOKING<br/><span class="text-[#ffd166]">FOR ROOMS?</span></h1>
+
+          <p class="mt-6 max-w-xl text-lg text-white-400 leading-relaxed">Fully Furnished Rooms available for Family, Couples & Executive Ladies — metro linked locations across Dubai. Comfortable living, inclusive utilities & fast Wi-Fi.</p>
+
+          <!-- Prominent Contact Section -->
+            <div class="mt-8 space-y-6">
+              <!-- Secondary Actions -->
+              <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                <a href="#facilities" class="bg-gradient-to-r from-[#ffd166] to-[#ff9500] text-gray-800 px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                  <i class="bx bx-buildings text-xl"></i>
+                  <span>View Facilities</span>
+                </a>
+
+                <a href="#locations" class="bg-white/10 backdrop-blur-sm text-white border border-white/30 px-6 py-3 rounded-full font-semibold hover:bg-white/20 hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                  <i class="bx bx-map text-xl"></i>
+                  <span>Our Locations</span>
+                </a>
+              </div>
+
+              <!-- Trust Indicators -->
+              <div class="flex flex-wrap gap-6 justify-center md:justify-start text-sm text-gray-300">
+                <div class="flex items-center gap-2">
+                  <i class="bx bx-check-circle text-green-400"></i>
+                  <span>Direct Owner</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="bx bx-check-circle text-green-400"></i>
+                  <span>No Commission</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="bx bx-check-circle text-green-400"></i>
+                  <span>24/7 Support</span>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- right - decorative, can be left blank if poster used as full background -->
+        <div class="hidden md:block">
+          <!-- Main Contact Card moved to right side for desktop -->
+          <div class="bg-gradient-to-r from-white/15 to-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/30 shadow-2xl" style="position:relative;z-index:1;">
+            <div class="text-center">
+              <div class="flex items-center justify-center gap-3 mb-3">
+                <div class="bg-gradient-to-r from-[#00cfff] to-[#0077b6] p-3 rounded-full shadow-lg">
+                  <i class="bx bx-phone text-2xl text-white"></i>
+                </div>
+                <div class="text-left">
+                  <p class="text-sm text-white font-medium">Contact us directly</p>
+                  <p class="text-xs text-white">No Commission • Available 24/7</p>
+                </div>
+              </div>
+              <!-- Large Phone Number -->
+              <div class="bg-gradient-to-r from-[#00cfff]/20 to-[#0077b6]/20 rounded-2xl p-4 mb-4 border border-[#00cfff]/30">
+                <a href="tel:+971585996040" class="block">
+                  <p class="text-sm text-gray-300 mb-1">Call or WhatsApp</p>
+                  <p class="text-3xl md:text-4xl font-black text-white hover:text-[#00cfff] transition-colors duration-300 tracking-wide">
+                    +971 58 599 6040
+                  </p>
+                </a>
+              </div>
+              <!-- Quick Action Buttons -->
+              <div class="flex flex-wrap gap-3 justify-center">
+                <a href="tel:+971585996040" class="bg-gradient-to-r from-[#00cfff] to-[#0077b6] text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                  <i class="bx bx-phone text-lg"></i>
+                  <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/971585996040" target="_blank" class="bg-gradient-to-r from-[#25D366] to-[#20B358] text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                  <i class="bx bxl-whatsapp text-lg"></i>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about" class="relative py-20 px-6 md:px-12 overflow-hidden">
+    <div class="max-w-7xl mx-auto relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16 fade-in delay-1">
+        <div class="inline-block bg-gradient-to-r from-[#00cfff]/20 to-[#0077b6]/20 rounded-full px-6 py-2 border border-[#00cfff]/30 mb-6">
+          <span class="text-[#00cfff] font-semibold text-sm uppercase tracking-wider">About Dubai Rooms</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+          Experience Premium <span class="text-[#00cfff]">Living</span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Your gateway to luxury furnished accommodation in Dubai's most connected neighborhoods
+        </p>
+      </div>
+
+      <!-- Main Content Grid -->
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        
+        <!-- Left Content -->
+        <div class="space-y-8">
+          <!-- Description Card -->
+          <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl fade-in delay-2">
+            <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+              <div class="bg-gradient-to-r from-[#00cfff] to-[#0077b6] p-2 rounded-xl">
+                <i class="bx bx-home text-xl text-white"></i>
+              </div>
+              Why Choose Us?
+            </h3>
+            <p class="text-lg leading-relaxed text-gray-200 mb-6">
+              Discover fully furnished rooms in prime metro-linked locations across Dubai. 
+              We provide a seamless living experience with transparent pricing, inclusive utilities, 
+              and unmatched comfort for families, couples, and executive ladies.
+            </p>
+            
+            <!-- Key Benefits -->
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="bg-white/5 rounded-2xl p-4 border border-white/10">
+                <h4 class="font-semibold text-white mb-2 flex items-center gap-2">
+                  <i class="bx bx-shield-check text-[#00cfff]"></i>
+                  Verified Properties
+                </h4>
+                <p class="text-sm text-gray-300">All properties are personally verified and maintained to high standards</p>
+              </div>
+              <div class="bg-white/5 rounded-2xl p-4 border border-white/10">
+                <h4 class="font-semibold text-white mb-2 flex items-center gap-2">
+                  <i class="bx bx-train text-[#00cfff]"></i>
+                  Metro Connected
+                </h4>
+                <p class="text-sm text-gray-300">Strategic locations near Dubai Metro for easy city-wide access</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features List -->
+          <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/20 fade-in delay-3">
+            <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+              <div class="bg-gradient-to-r from-green-400 to-green-600 p-2 rounded-xl">
+                <i class="bx bx-check-circle text-xl text-white"></i>
+              </div>
+              What You Get
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4 group hover:bg-white/5 rounded-xl p-3 transition-all duration-300">
+                <div class="bg-[#00cfff] p-2 rounded-full mt-1 group-hover:scale-110 transition-transform">
+                  <i class="bx bx-check text-white text-sm"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold">Direct Owner Listings</h4>
+                  <p class="text-gray-300 text-sm">No commission fees - deal directly with property owners</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4 group hover:bg-white/5 rounded-xl p-3 transition-all duration-300">
+                <div class="bg-[#00cfff] p-2 rounded-full mt-1 group-hover:scale-110 transition-transform">
+                  <i class="bx bx-check text-white text-sm"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold">Flexible Stay Options</h4>
+                  <p class="text-gray-300 text-sm">Short & long-term stays available to suit your needs</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4 group hover:bg-white/5 rounded-xl p-3 transition-all duration-300">
+                <div class="bg-[#00cfff] p-2 rounded-full mt-1 group-hover:scale-110 transition-transform">
+                  <i class="bx bx-check text-white text-sm"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold">Premium Quality</h4>
+                  <p class="text-gray-300 text-sm">Clean, secure, and well-maintained properties with modern amenities</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="space-y-8">
+          <!-- Stats Cards -->
+          <div class="grid grid-cols-2 gap-6 fade-in delay-4">
+            <div class="bg-gradient-to-br from-[#00cfff]/20 to-[#0077b6]/20 backdrop-blur-sm rounded-2xl p-6 border border-[#00cfff]/30 text-center hover:scale-105 transition-transform duration-300">
+              <div class="text-3xl font-black text-white mb-2">7+</div>
+              <div class="text-sm text-gray-300">Prime Locations</div>
+            </div>
+            <div class="bg-gradient-to-br from-green-400/20 to-green-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-400/30 text-center hover:scale-105 transition-transform duration-300">
+              <div class="text-3xl font-black text-white mb-2">24/7</div>
+              <div class="text-sm text-gray-300">Support Available</div>
+            </div>
+            <div class="bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/30 text-center hover:scale-105 transition-transform duration-300">
+              <div class="text-3xl font-black text-white mb-2">0%</div>
+              <div class="text-sm text-gray-300">Commission Fee</div>
+            </div>
+            <div class="bg-gradient-to-br from-purple-400/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/30 text-center hover:scale-105 transition-transform duration-300">
+              <div class="text-3xl font-black text-white mb-2">100%</div>
+              <div class="text-sm text-gray-300">Furnished Rooms</div>
+            </div>
+          </div>
+
+          <!-- CTA Card -->
+          <div class="bg-gradient-to-r from-[#ffd166]/10 to-[#ff9500]/10 backdrop-blur-md rounded-3xl p-8 border border-[#ffd166]/30 text-center fade-in delay-5">
+            <h3 class="text-2xl font-bold text-white mb-4">Ready to Find Your Perfect Room?</h3>
+            <p class="text-gray-300 mb-6">Join hundreds of satisfied residents who chose our premium accommodations</p>
+            <div class="flex flex-wrap gap-4 justify-center">
+              <a href="#contact" class="bg-gradient-to-r from-[#00cfff] to-[#0077b6] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                <i class="bx bx-phone"></i>
+                <span>Contact Now</span>
+              </a>
+              <a href="#locations" class="bg-white/10 backdrop-blur-sm text-white border border-white/30 px-6 py-3 rounded-full font-semibold hover:bg-white/20 hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                <i class="bx bx-map"></i>
+                <span>View Locations</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Trust Indicators -->
+          <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 fade-in delay-6">
+            <h4 class="text-white font-semibold mb-4 text-center">Trusted by Residents</h4>
+            <div class="flex justify-center gap-8 text-center">
+              <div>
+                <i class="bx bx-shield-check text-2xl text-green-400 mb-2 block"></i>
+                <div class="text-xs text-gray-300">Verified Owner</div>
+              </div>
+              <div>
+                <i class="bx bx-time text-2xl text-blue-400 mb-2 block"></i>
+                <div class="text-xs text-gray-300">Instant Response</div>
+              </div>
+              <div>
+                <i class="bx bx-star text-2xl text-yellow-400 mb-2 block"></i>
+                <div class="text-xs text-gray-300">Quality Assured</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+      <!-- FACILITIES -->
+      <section id="facilities" class="relative py-20 px-6 md:px-12 overflow-hidden">
+  <div class="max-w-7xl mx-auto relative z-10">
+    
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 fade-in delay-1">
+        Premium <span class="text-[#00cfff]">Facilities</span>
+      </h2>
+      <p class="text-lg text-gray-200 max-w-2xl mx-auto fade-in delay-2">
+        Experience luxury living with world-class amenities designed for your comfort and convenience.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Facility Card -->
+      <div class="facility-card bg-white/10 backdrop-blur-sm shadow-2xl rounded-2xl p-8 flex flex-col items-center text-center border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-[#00cfff]/50 hover:transform hover:scale-105 fade-in delay-3">
+        <div class="bg-gradient-to-tr from-[#00cfff] to-[#0077b6] p-5 rounded-full mb-6 shadow-lg">
+          <i class="bx bx-wifi text-4xl text-white"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">Free High-Speed WiFi (500 Mbps)</h3>
+        <p class="text-gray-300">Stay connected with complimentary ultra-fast internet for all residents.</p>
+      </div>
+
+      <!-- Facility Card -->
+      <div class="facility-card bg-white/10 backdrop-blur-sm shadow-2xl rounded-2xl p-8 flex flex-col items-center text-center border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-[#00cfff]/50 hover:transform hover:scale-105 fade-in delay-4">
+        <div class="bg-gradient-to-tr from-green-400 to-green-600 p-5 rounded-full mb-6 shadow-lg">
+          <i class="bx bx-bed text-4xl text-white"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">Attached Bathroom & Fully Furnished Room</h3>
+        <p class="text-gray-300">Move into comfort with modern furniture and private bathrooms.</p>
+      </div>
+
+      <!-- Facility Card -->
+      <div class="facility-card bg-white/10 backdrop-blur-sm shadow-2xl rounded-2xl p-8 flex flex-col items-center text-center border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-[#00cfff]/50 hover:transform hover:scale-105 fade-in delay-5">
+        <div class="bg-gradient-to-tr from-yellow-400 to-yellow-600 p-5 rounded-full mb-6 shadow-lg">
+          <i class="bx bx-restaurant text-4xl text-white"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">Shared Kitchen + Free Cooking Gas</h3>
+        <p class="text-gray-300">Enjoy full kitchen access with complimentary cooking gas included.</p>
+      </div>
+
+      <!-- Facility Card -->
+      <div class="facility-card bg-white/10 backdrop-blur-sm shadow-2xl rounded-2xl p-8 flex flex-col items-center text-center border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-[#00cfff]/50 hover:transform hover:scale-105 fade-in delay-6">
+        <div class="bg-gradient-to-tr from-red-400 to-red-600 p-5 rounded-full mb-6 shadow-lg">
+          <i class="bx bx-cog text-4xl text-white"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">Water & Electricity Included</h3>
+        <p class="text-gray-300">Forget extra bills — all utilities are included in your rent.</p>
+      </div>
+
+      <!-- Facility Card -->
+      <div class="facility-card bg-white/10 backdrop-blur-sm shadow-2xl rounded-2xl p-8 flex flex-col items-center text-center border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-[#00cfff]/50 hover:transform hover:scale-105 fade-in delay-7">
+        <div class="bg-gradient-to-tr from-purple-400 to-purple-600 p-5 rounded-full mb-6 shadow-lg">
+          <i class="bx bx-trash text-4xl text-white"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">Daily Free Cleaning Service</h3>
+        <p class="text-gray-300">Enjoy a tidy space with complimentary daily housekeeping.</p>
+      </div>
+
+      <!-- Facility Card -->
+      <div class="facility-card bg-white/10 backdrop-blur-sm shadow-2xl rounded-2xl p-8 flex flex-col items-center text-center border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-[#00cfff]/50 hover:transform hover:scale-105 fade-in delay-8">
+        <div class="bg-gradient-to-tr from-indigo-400 to-indigo-600 p-5 rounded-full mb-6 shadow-lg">
+          <i class="bx bx-shield text-4xl text-white"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">24/7 Security & Support</h3>
+        <p class="text-gray-300">Feel safe and secure with round-the-clock security and assistance.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- LOCATIONS -->
+<section id="locations" class="relative py-20 px-6 md:px-12 overflow-hidden">
+  <div class="max-w-7xl mx-auto relative z-10">
+    
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 fade-in delay-1">
+        Prime <span class="text-[#00cfff]">Locations</span>
+      </h2>
+      <p class="text-lg text-gray-200 max-w-2xl mx-auto fade-in delay-2">
+        Strategically located near Dubai Metro stations for seamless connectivity across the city.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+      <!-- Location Card -->
+      <div class="location-card bg-white/10 backdrop-blur-sm shadow-2xl rounded-2xl p-6 border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-[#00cfff]/50 hover:transform hover:scale-105 fade-in delay-3">
+        <div class="flex items-center mb-4">
+          <div class="bg-gradient-to-tr from-[#00cfff] to-[#0077b6] p-3 rounded-full mr-4 shadow-lg">
+            <i class="bx bx-train text-2xl text-white"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white">Al Rigga</h3>
+            <p class="text-sm text-gray-300">Near Metro Station</p>
+          </div>
+        </div>
+        <div class="flex items-center text-sm text-gray-400">
+          <i class="bx bx-map-pin mr-2"></i>
+          <span>Deira District</span>
+        </div>
+      </div>
+
+      <!-- Location Card -->
+      <div class="location-card bg-white/10 backdrop-blur-sm shadow-2xl rounded-2xl p-6 border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-[#00cfff]/50 hover:transform hover:scale-105 fade-in delay-4">
+        <div class="flex items-center mb-4">
+          <div class="bg-gradient-to-tr from-green-400 to-green-600 p-3 rounded-full mr-4 shadow-lg">
+            <i class="bx bx-train text-2xl text-white"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white">Salaheldin</h3>
+            <p class="text-sm text-gray-300">Near Metro Station</p>
+          </div>
+        </div>
+        <div class="flex items-center text-sm text-gray-400">
+          <i class="bx bx-map-pin mr-2"></i>
+          <span>Deira District</span>
+        </div>
+      </div>
+
+      <!-- Location Card -->
+      <div class="location-card bg-white/10 backdrop-blur-sm shadow-2xl rounded-2xl p-6 border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-[#00cfff]/50 hover:transform hover:scale-105 fade-in delay-5">
+        <div class="flex items-center mb-4">
+          <div class="bg-gradient-to-tr from-yellow-400 to-yellow-600 p-3 rounded-full mr-4 shadow-lg">
+            <i class="bx bx-train text-2xl text-white"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white">Abu Baker Al Siddique</h3>
+            <p class="text-sm text-gray-300">Metro Station Area</p>
+          </div>
+        </div>
+        <div class="flex items-center text-sm text-gray-400">
+          <i class="bx bx-map-pin mr-2"></i>
+          <span>Deira District</span>
+        </div>
+      </div>
+
+      <!-- Location Card -->
+      <div class="location-card bg-white/10 backdrop-blur-sm shadow-2xl rounded-2xl p-6 border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-[#00cfff]/50 hover:transform hover:scale-105 fade-in delay-6">
+        <div class="flex items-center mb-4">
+          <div class="bg-gradient-to-tr from-red-400 to-red-600 p-3 rounded-full mr-4 shadow-lg">
+            <i class="bx bx-train text-2xl text-white"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white">Abu Hail</h3>
+            <p class="text-sm text-gray-300">Metro Station Area</p>
+          </div>
+        </div>
+        <div class="flex items-center text-sm text-gray-400">
+          <i class="bx bx-map-pin mr-2"></i>
+          <span>Deira District</span>
+        </div>
+      </div>
+
+      <!-- Location Card -->
+      <div class="location-card bg-white/10 backdrop-blur-sm shadow-2xl rounded-2xl p-6 border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-[#00cfff]/50 hover:transform hover:scale-105 fade-in delay-7">
+        <div class="flex items-center mb-4">
+          <div class="bg-gradient-to-tr from-purple-400 to-purple-600 p-3 rounded-full mr-4 shadow-lg">
+            <i class="bx bx-train text-2xl text-white"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white">Al Qiyadah</h3>
+            <p class="text-sm text-gray-300">Near Metro Station</p>
+          </div>
+        </div>
+        <div class="flex items-center text-sm text-gray-400">
+          <i class="bx bx-map-pin mr-2"></i>
+          <span>Deira District</span>
+        </div>
+      </div>
+
+      <!-- Location Card -->
+      <div class="location-card bg-white/10 backdrop-blur-sm shadow-2xl rounded-2xl p-6 border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-[#00cfff]/50 hover:transform hover:scale-105 fade-in delay-8">
+        <div class="flex items-center mb-4">
+          <div class="bg-gradient-to-tr from-indigo-400 to-indigo-600 p-3 rounded-full mr-4 shadow-lg">
+            <i class="bx bx-train text-2xl text-white"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white">Al Nahda</h3>
+            <p class="text-sm text-gray-300">Metro Station Area</p>
+          </div>
+        </div>
+        <div class="flex items-center text-sm text-gray-400">
+          <i class="bx bx-map-pin mr-2"></i>
+          <span>Sharjah Border</span>
+        </div>
+      </div>
+
+      <!-- Location Card -->
+      <div class="location-card bg-white/10 backdrop-blur-sm shadow-2xl rounded-2xl p-6 border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-[#00cfff]/50 hover:transform hover:scale-105 fade-in delay-9">
+        <div class="flex items-center mb-4">
+          <div class="bg-gradient-to-tr from-pink-400 to-pink-600 p-3 rounded-full mr-4 shadow-lg">
+            <i class="bx bx-train text-2xl text-white"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-white">Airport Freezone</h3>
+            <p class="text-sm text-gray-300">Near Metro Station</p>
+          </div>
+        </div>
+        <div class="flex items-center text-sm text-gray-400">
+          <i class="bx bx-map-pin mr-2"></i>
+          <span>Airport District</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="relative py-20 px-6 md:px-12 overflow-hidden">
+  <div class="max-w-7xl mx-auto relative z-10">
+
+    <!-- Highlight Banner -->
+    <div class="text-center mb-16">
+      <div class="bg-gradient-to-r from-[#ffd166] to-[#ff9500] text-gray-800 font-bold py-3 px-8 rounded-full shadow-xl inline-block mb-8 text-lg tracking-wide fade-in delay-1">
+        🚫 NO COMMISSION – DIRECT FROM OWNER
+      </div>
+
+      <!-- Title -->
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 fade-in delay-2">
+        Ready to <span class="text-[#00cfff]">Move In?</span>
+      </h2>
+      <p class="text-lg text-gray-200 max-w-3xl mx-auto fade-in delay-3">
+        Contact us today to book your premium furnished room in Dubai's most convenient metro-linked locations. 
+        <span class="text-[#00cfff] font-semibold">No hidden fees, no commission, direct from owner.</span>
+      </p>
+    </div>
+
+    <!-- Main Contact Card -->
+    <div class="max-w-4xl mx-auto mb-16 fade-in delay-4">
+      <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+        <div class="text-center">
+          <div class="bg-gradient-to-r from-[#00cfff] to-[#0077b6] p-6 rounded-full inline-block mb-6 shadow-lg">
+            <i class="bx bx-phone text-4xl text-white"></i>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Call or WhatsApp Now</h3>
+          <a href="tel:+971585996040" class="text-4xl md:text-5xl font-extrabold text-[#00cfff] hover:text-white transition-colors duration-300 block mb-6">
+            +971 58 599 6040
+          </a>
+          
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="tel:+971585996040" class="bg-gradient-to-r from-[#00cfff] to-[#0077b6] text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-3">
+              <i class="bx bx-phone text-xl"></i>
+              <span class="text-lg">Call Now</span>
+            </a>
+            <a href="https://wa.me/971585996040" target="_blank" class="bg-gradient-to-r from-[#25D366] to-[#20B358] text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-3">
+              <i class="bx bxl-whatsapp text-xl"></i>
+              <span class="text-lg">WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Info Grid -->
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Instant Response -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center hover:bg-white/20 hover:scale-105 transition-all duration-300 fade-in delay-5">
+        <div class="bg-gradient-to-r from-green-400 to-green-600 p-4 rounded-full inline-block mb-6 shadow-lg">
+          <i class="bx bx-time text-3xl text-white"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">Instant Response</h3>
+        <p class="text-gray-300">Get immediate answers to your queries. Available 24/7 for your convenience.</p>
+      </div>
+      
+      <!-- Virtual Tour -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center hover:bg-white/20 hover:scale-105 transition-all duration-300 fade-in delay-6">
+        <div class="bg-gradient-to-r from-purple-400 to-purple-600 p-4 rounded-full inline-block mb-6 shadow-lg">
+          <i class="bx bx-video text-3xl text-white"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">Virtual Tour</h3>
+        <p class="text-gray-300">Schedule a virtual tour via video call to see your future home before visiting.</p>
+      </div>
+      
+      <!-- Same Day Visit -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center hover:bg-white/20 hover:scale-105 transition-all duration-300 fade-in delay-7">
+        <div class="bg-gradient-to-r from-yellow-400 to-yellow-600 p-4 rounded-full inline-block mb-6 shadow-lg">
+          <i class="bx bx-map-pin text-3xl text-white"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">Same Day Visit</h3>
+        <p class="text-gray-300">Book a same-day visit to any of our metro-linked locations across Dubai.</p>
+      </div>
+
+    </div>
+
+    <!-- Contact Information -->
+    <div class="mt-16 text-center fade-in delay-8">
+      <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+        <div class="grid md:grid-cols-3 gap-6 text-white">
+          <div class="flex items-center justify-center gap-3">
+            <i class="bx bx-envelope text-[#00cfff] text-xl"></i>
+            <span>Available via WhatsApp</span>
+          </div>
+          <div class="flex items-center justify-center gap-3">
+            <i class="bx bx-time text-[#00cfff] text-xl"></i>
+            <span>24/7 Customer Support</span>
+          </div>
+          <div class="flex items-center justify-center gap-3">
+            <i class="bx bx-map text-[#00cfff] text-xl"></i>
+            <span>Dubai Metro Linked</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Animations -->
+<style>
+@keyframes fadeUp {
+  0% {opacity: 0; transform: translateY(30px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.animate-fadeUp {
+  animation: fadeUp 0.8s ease forwards;
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+</style>
+
+
+
+
+<!-- Boxicons CDN -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/971585996040" target="_blank"
+     class="fixed right-5 bottom-5 z-50 bg-[#25D366] p-4 rounded-full shadow-lg hover:scale-105 transition">
+    <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="whatsapp"/>
+  </a>
+
+  <footer class="py-6 text-center text-sm text-gray-500">
+    © 2025 Dubai Rooms — All rights reserved.
+  </footer>
+
+  <!-- small script: reveal on scroll -->
+  <script>
+    const items = document.querySelectorAll('.reveal-item');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          const el = en.target;
+          const d = el.dataset.delay ? Number(el.dataset.delay) : 0;
+          setTimeout(()=> el.classList.add('revealed'), d);
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    items.forEach(i => io.observe(i));
+    document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".location-card");
+
+  // Set initial opacity 0 and translateY(20px) so they're hidden before animation
+  cards.forEach(card => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(20px)";
+  });
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const card = entry.target;
+        // Add animation class
+        card.classList.add("animate-fade-slide-up");
+
+        // Add stagger delay based on index
+        const index = Array.from(cards).indexOf(card);
+        card.style.animationDelay = `${index * 0.15}s`;
+
+        observer.unobserve(card); // Animate only once
+      }
+    });
+  }, {
+    threshold: 0.1, // Trigger when 10% of card visible
+  });
+
+  cards.forEach(card => observer.observe(card));
+});
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
